@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WeatherInfo = ({ weatherData, unit, onUnitToggle,cityName }) => {
+const WeatherInfo = ({ weatherData, unit, onUnitToggle,cityName,countryName }) => {
   const convertTemperature = (tempInCelsius) => {
     return unit === 'C'
       ? tempInCelsius
@@ -16,6 +16,7 @@ const WeatherInfo = ({ weatherData, unit, onUnitToggle,cityName }) => {
 
       <div className="current-weather">
         <p>City Name : {cityName}</p>
+        <p>Country Name : {countryName}</p>
         <p>Temperature: {currentTemp.toFixed(1)}°{unit}</p>
         <p>Feels Like: {feelsLike.toFixed(1)}°{unit}</p>
         <p>Humidity: {weatherData.current.humidity}%</p>
